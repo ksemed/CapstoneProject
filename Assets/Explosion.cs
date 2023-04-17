@@ -5,6 +5,13 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
 
+    bool CollisionConfirmation = false;
+
+    public void CollisionDetected(ChildCollision childScript)
+    {
+        Debug.Log("child collided");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,18 +20,29 @@ public class Explosion : MonoBehaviour
         Transform bottomTransform = bottom.transform;
         Vector3 bposition = bottomTransform.position; 
 
+        Vector3[] positionArray = new Vector3[11];
+        int i = 0;
+        GameObject Positions = GameObject.Find("Positions");
+        // Storing all positions of Objects in array
+        foreach (Transform child in Positions.transform)
+        {
+            positionArray[i] = child.position;
+            i++;    
+        }
+
+        i = 0;
+
         foreach (Transform child in transform)
         {
             // Vector of specific component
-           Vector3 Object = child.position;
-           //Debug.Log(bposition.ToString());
-           Debug.Log(Object.ToString());
+           Vector3 Object = positionArray[i];
            // Vector Representing Proper Direction
            Vector3 Direction = Object - bposition;
-           //Debug.Log(Direction.ToString());
-           Direction = Direction * 100;
-           //Debug.Log(Direction.ToString());
-           child.position += Direction * Time.deltaTime;
+           Direction = Direction * 10;
+            while(CollisionConfirmation == true) {
+                child.position += Direction * Time.deltaTime;
+            }
+           i++;
         }
     }
 
@@ -34,3 +52,23 @@ public class Explosion : MonoBehaviour
         
     }
 }
+
+// Code for amount for later
+/*
+while(CollisionConfirmation == true) {
+    child.position += Direction * Time.deltaTime;
+}
+
+*/
+
+// Code for undoing explosion
+/*
+i = 0;
+if sphere is touched:
+    foreach(Transform child in transform)
+    {
+        child.position == positionArray[i];
+        i++;
+    }
+*/
+
