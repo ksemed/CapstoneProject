@@ -7,11 +7,17 @@ public class Explosion : MonoBehaviour
 
     bool CollisionConfirmation = false;
 
-    public void CollisionDetected(ChildCollision childScript)
+    public void PullTrigger(Collider c)
     {
-        Debug.Log("child collided");
+        CollisionConfirmation = true;
+        //Debug.Log(CollisionConfirmation);
     }
 
+    public void PullTrigger2(Collider c2)
+    {
+        //Debug.Log(CollisionConfirmation);
+        CollisionConfirmation = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +38,7 @@ public class Explosion : MonoBehaviour
 
         i = 0;
 
+        waiter();
         foreach (Transform child in transform)
         {
             // Vector of specific component
@@ -39,17 +46,27 @@ public class Explosion : MonoBehaviour
            // Vector Representing Proper Direction
            Vector3 Direction = Object - bposition;
            Direction = Direction * 10;
+           //Debug.Log(CollisionConfirmation);
             while(CollisionConfirmation == true) {
                 child.position += Direction * Time.deltaTime;
+                waiter();
             }
+            
+            //child.position += Direction * Time.deltaTime;
            i++;
-        }
+        }        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator waiter()
+    {
+        //Wait for 4 seconds
+        yield return new WaitForSeconds(4);
     }
 }
 

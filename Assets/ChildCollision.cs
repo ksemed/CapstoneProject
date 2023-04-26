@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ChildCollision : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider c)
     {
-        transform.parent.GetComponent<Explosion>().CollisionDetected(this);
+        gameObject.GetComponentInParent<Explosion>().PullTrigger(c);
+    }
+
+    void OnTriggerExit(Collider c2)
+    {
+        gameObject.GetComponentInParent<Explosion>().PullTrigger2(c2);        
     }
 
     // Start is called before the first frame update
