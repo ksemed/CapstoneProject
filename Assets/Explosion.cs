@@ -1,9 +1,11 @@
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+
 
     bool CollisionConfirmation = false;
 
@@ -49,12 +51,13 @@ public class Explosion : MonoBehaviour
            //Debug.Log(CollisionConfirmation);
             while(CollisionConfirmation == true) {
                 child.position += Direction * Time.deltaTime;
-                waiter();
             }
             
             //child.position += Direction * Time.deltaTime;
            i++;
-        }        
+        }
+
+                
     }
 
     // Update is called once per frame
@@ -63,13 +66,8 @@ public class Explosion : MonoBehaviour
 
     }
 
-    IEnumerator waiter()
-    {
-        //Wait for 4 seconds
-        yield return new WaitForSeconds(4);
-    }
 }
-
+*/
 // Code for amount for later
 /*
 while(CollisionConfirmation == true) {
