@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion2 : MonoBehaviour
+public class CubeTest : MonoBehaviour
 {
 
     int i = 0;
@@ -11,21 +11,21 @@ public class Explosion2 : MonoBehaviour
     
     public void OnTriggerStay(Collider c)
     {
-        GameObject confirm = GameObject.Find("Exploding Confirmation");
+        GameObject confirm = GameObject.Find("CollisionConfirmation");
         if(confirm) {
             if(i == 0) {
                 // Find the middle vector of list of components
-                GameObject middle = GameObject.Find("Middle of Bottom");
+                GameObject middle = GameObject.Find("MiddleCube");
                 Transform middleTransform = middle.transform;
                 Vector3 mposition = middleTransform.position; 
 
                 string objectname = gameObject.name;    
-                GameObject theobject = GameObject.Find(objectname);
-                Transform objectTransform = theobject.transform;
-                Vector3 oposition = objectTransform.position; 
+                GameObject cube = GameObject.Find(objectname);
+                Transform cubeTransform = cube.transform;
+                Vector3 cposition = cubeTransform.position; 
 
                 // Vector Representing Proper Direction
-                Direction = oposition - mposition;
+                Direction = cposition - mposition;
                 Direction = Direction * 2;
                 transform.position += Direction * Time.deltaTime;
 
@@ -46,7 +46,7 @@ public class Explosion2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        GameObject confirm2 = GameObject.Find("Exploding Confirmation");
+        GameObject confirm2 = GameObject.Find("CollisionConfirmation");
 
         if(confirm2 == null) {
             this.transform.position = startPos;
@@ -54,4 +54,3 @@ public class Explosion2 : MonoBehaviour
 
     }
 }
-
