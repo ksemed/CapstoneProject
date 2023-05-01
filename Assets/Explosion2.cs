@@ -12,17 +12,22 @@ public class Explosion2 : MonoBehaviour
     public void OnTriggerStay(Collider c)
     {
         GameObject confirm = GameObject.Find("Exploding Confirmation");
-        if(confirm) {
+        
+        GameObject collidingobject = GameObject.Find(c.name);
+        Transform collidingTransform = collidingobject.transform;
+        Vector3 cposition = collidingTransform.position;
+
+        string objectname = gameObject.name;    
+        GameObject theobject = GameObject.Find(objectname);
+        Transform objectTransform = theobject.transform;
+        Vector3 oposition = objectTransform.position; 
+
+        if(confirm && (cposition.magnitude <= oposition.magnitude)) {
             if(i == 0) {
                 // Find the middle vector of list of components
                 GameObject middle = GameObject.Find("Middle of Bottom");
                 Transform middleTransform = middle.transform;
                 Vector3 mposition = middleTransform.position; 
-
-                string objectname = gameObject.name;    
-                GameObject theobject = GameObject.Find(objectname);
-                Transform objectTransform = theobject.transform;
-                Vector3 oposition = objectTransform.position; 
 
                 // Vector Representing Proper Direction
                 Direction = oposition - mposition;
