@@ -13,34 +13,34 @@ public class Explosion2 : MonoBehaviour
     {
         GameObject confirm = GameObject.Find("Exploding Confirmation");
         
+        // Find position of colliding object
         GameObject collidingobject = GameObject.Find(c.name);
         Transform collidingTransform = collidingobject.transform;
         Vector3 cposition = collidingTransform.position;
 
+        // Finding position of object being collided with
         string objectname = gameObject.name;    
         GameObject theobject = GameObject.Find(objectname);
         Transform objectTransform = theobject.transform;
         Vector3 oposition = objectTransform.position; 
 
-        if(confirm && (cposition.magnitude <= oposition.magnitude)) {
-            if(i == 0) {
-                // Find the middle vector of list of components
-                GameObject middle = GameObject.Find("Middle of Bottom");
-                Transform middleTransform = middle.transform;
-                Vector3 mposition = middleTransform.position; 
+        if(i == 0) {
+            // Find the middle vector of list of components
+            GameObject middle = GameObject.Find("BottomSphere");
+            Transform middleTransform = middle.transform;
+            Vector3 mposition = middleTransform.position; 
 
-                // Vector Representing Proper Direction
-                Direction = oposition - mposition;
-                Direction = Direction * 2;
-                transform.position += Direction * Time.deltaTime;
-
-            }
-            if(i > 0){
-                transform.position += Direction * Time.deltaTime;
-            }
-
-            i++;
+            // Vector Representing Proper Direction
+            Direction = oposition - mposition;
+            Direction = Direction * 15;
+            transform.position += Direction * Time.deltaTime;
         }
+
+        if(confirm && (cposition.magnitude <= oposition.magnitude) && i > 0) {
+                transform.position += Direction * Time.deltaTime;
+        }
+
+        i++;
     }
     // Start is called before the first frame update
     void Start()
