@@ -36,7 +36,7 @@ public class Explosion2 : MonoBehaviour
             transform.position += Direction * Time.deltaTime;
         }
 
-        if(confirm && (cposition.magnitude <= oposition.magnitude) && i > 0) {
+        if(confirm && (cposition.magnitude <= oposition.magnitude) && i > 0 && c.name != "BottomSphere") {
                 transform.position += Direction * Time.deltaTime;
         }
 
