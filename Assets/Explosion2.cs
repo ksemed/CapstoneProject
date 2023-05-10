@@ -26,7 +26,7 @@ public class Explosion2 : MonoBehaviour
 
         if(i == 0) {
             // Find the middle vector of list of components
-            GameObject middle = GameObject.Find("BottomSphere");
+            GameObject middle = GameObject.Find("BottomSphereLocation");
             Transform middleTransform = middle.transform;
             Vector3 mposition = middleTransform.position; 
 
