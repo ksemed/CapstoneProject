@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3124055}
   - component: {fileID: 3124054}
   m_Layer: 5
-  m_Name: Track Rollers
+  m_Name: Track RollersUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 132914792}
   - component: {fileID: 132914791}
   m_Layer: 5
-  m_Name: Rotator
+  m_Name: RotatorUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: 145620233}
   - component: {fileID: 145620232}
   m_Layer: 5
-  m_Name: Hydraulic Cylinders Crane
+  m_Name: Hydraulic Cylinders CraneUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1875,7 +1875,7 @@ GameObject:
   - component: {fileID: 264967797}
   - component: {fileID: 264967796}
   m_Layer: 5
-  m_Name: Harvester Arm
+  m_Name: Harvester ArmUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2925,7 +2925,7 @@ GameObject:
   - component: {fileID: 406665213}
   - component: {fileID: 406665212}
   m_Layer: 5
-  m_Name: Lights Container
+  m_Name: Lights ContainerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3444,8 +3444,9 @@ GameObject:
   - component: {fileID: 493343356}
   - component: {fileID: 493343355}
   - component: {fileID: 493343354}
+  - component: {fileID: 493343357}
   m_Layer: 5
-  m_Name: Slewing Rings
+  m_Name: Slewing RingsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3459,7 +3460,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493343352}
   m_LocalRotation: {x: -0, y: 0.70515054, z: -0, w: -0.7090577}
-  m_LocalPosition: {x: 0, y: 0, z: -0.059}
+  m_LocalPosition: {x: 0, y: 0, z: -0.34}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3470,7 +3471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -449.68298, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.178, y: 0.47}
+  m_AnchoredPosition: {x: -0.043, y: 0.38}
   m_SizeDelta: {x: 173.4, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493343354
@@ -3534,6 +3535,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &493343357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493343352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d5bfd6625e0f14983422218e7c66d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object: {fileID: 616454375}
 --- !u!1 &496141720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,7 +4526,7 @@ GameObject:
   - component: {fileID: 606347432}
   - component: {fileID: 606347431}
   m_Layer: 5
-  m_Name: Front Idler
+  m_Name: Front IdlerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4979,7 +4993,7 @@ GameObject:
   - component: {fileID: 659393006}
   - component: {fileID: 659393005}
   m_Layer: 5
-  m_Name: Track Protectors
+  m_Name: Track ProtectorsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5914,7 +5928,7 @@ GameObject:
   - component: {fileID: 788966589}
   - component: {fileID: 788966588}
   m_Layer: 5
-  m_Name: Moving Limbing Tool
+  m_Name: Moving Limbing ToolUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6568,12 +6582,12 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -6593,7 +6607,7 @@ PrefabInstance:
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -55.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4422659091188657070, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
@@ -6646,7 +6660,7 @@ GameObject:
   - component: {fileID: 910189226}
   - component: {fileID: 910189225}
   m_Layer: 5
-  m_Name: Feed Rollers
+  m_Name: Feed RollersUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7127,7 +7141,7 @@ GameObject:
   - component: {fileID: 976516250}
   - component: {fileID: 976516249}
   m_Layer: 5
-  m_Name: Vehicle Chassis
+  m_Name: Vehicle ChassisUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7972,7 +7986,7 @@ GameObject:
   - component: {fileID: 1024502653}
   - component: {fileID: 1024502652}
   m_Layer: 5
-  m_Name: Main Body with Engine
+  m_Name: Main Body with EngineUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8378,7 +8392,7 @@ GameObject:
   - component: {fileID: 1084613001}
   - component: {fileID: 1084613000}
   m_Layer: 5
-  m_Name: Moving Limbing Tool
+  m_Name: Moving Limbing ToolUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8522,7 +8536,7 @@ GameObject:
   - component: {fileID: 1128024929}
   - component: {fileID: 1128024928}
   m_Layer: 5
-  m_Name: Harvester 2nd Arm
+  m_Name: Harvester 2nd ArmUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8700,7 +8714,7 @@ GameObject:
   - component: {fileID: 1173037711}
   - component: {fileID: 1173037710}
   m_Layer: 5
-  m_Name: Rubber Pipes Crane
+  m_Name: Rubber Pipes CraneUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8916,7 +8930,7 @@ GameObject:
   - component: {fileID: 1182386837}
   - component: {fileID: 1182386836}
   m_Layer: 5
-  m_Name: Track Links
+  m_Name: Track LinksUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9018,7 +9032,7 @@ GameObject:
   - component: {fileID: 1200558819}
   - component: {fileID: 1200558818}
   m_Layer: 5
-  m_Name: Cabin
+  m_Name: CabinUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9859,7 +9873,7 @@ GameObject:
   - component: {fileID: 1307723988}
   - component: {fileID: 1307723987}
   m_Layer: 5
-  m_Name: Hydraulic Cylinders Harvester Head
+  m_Name: Hydraulic Cylinders Harvester HeadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10113,7 +10127,7 @@ GameObject:
   - component: {fileID: 1330252759}
   - component: {fileID: 1330252758}
   m_Layer: 5
-  m_Name: Rear Idler
+  m_Name: Rear IdlerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10498,7 +10512,7 @@ GameObject:
   - component: {fileID: 1376493622}
   - component: {fileID: 1376493621}
   m_Layer: 5
-  m_Name: Track Chains
+  m_Name: Track ChainsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12676,7 +12690,7 @@ GameObject:
   - component: {fileID: 1535427058}
   - component: {fileID: 1535427057}
   m_Layer: 5
-  m_Name: Head Fixed Frame Hydraulics
+  m_Name: Head Fixed Frame HydraulicsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15710,7 +15724,7 @@ GameObject:
   - component: {fileID: 1932719332}
   - component: {fileID: 1932719331}
   m_Layer: 5
-  m_Name: Saw
+  m_Name: SawUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15887,8 +15901,9 @@ GameObject:
   - component: {fileID: 1970043065}
   - component: {fileID: 1970043064}
   - component: {fileID: 1970043063}
+  - component: {fileID: 1970043066}
   m_Layer: 5
-  m_Name: Hydraulic Cylinders Main Body
+  m_Name: Hydraulic Cylinders Main BodyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15902,7 +15917,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970043061}
   m_LocalRotation: {x: -0, y: -0.7269867, z: -0, w: -0.6866516}
-  m_LocalPosition: {x: 0, y: 0, z: -0.665}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3691}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15913,7 +15928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -87.62, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.266, y: 0.147}
+  m_AnchoredPosition: {x: 0.0195, y: 0.2831}
   m_SizeDelta: {x: 173.4, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970043063
@@ -15977,6 +15992,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1970043066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970043061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d5bfd6625e0f14983422218e7c66d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object: {fileID: 616454375}
 --- !u!1 &1974252045
 GameObject:
   m_ObjectHideFlags: 0
@@ -15990,7 +16018,7 @@ GameObject:
   - component: {fileID: 1974252048}
   - component: {fileID: 1974252047}
   m_Layer: 5
-  m_Name: Harvester Head
+  m_Name: Harvester HeadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16091,8 +16119,9 @@ GameObject:
   - component: {fileID: 1979523332}
   - component: {fileID: 1979523331}
   - component: {fileID: 1979523330}
+  - component: {fileID: 1979523333}
   m_Layer: 5
-  m_Name: Rubber Pipes Main Body
+  m_Name: Rubber Pipes Main BodyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16106,7 +16135,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979523328}
   m_LocalRotation: {x: -0, y: -0.7466735, z: -0, w: 0.66519076}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0712}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3378}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16117,7 +16146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -96.606, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.217, y: 0.252}
+  m_AnchoredPosition: {x: -0.0103, y: 0.252}
   m_SizeDelta: {x: 173.4, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979523330
@@ -16181,6 +16210,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1979523333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979523328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d5bfd6625e0f14983422218e7c66d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object: {fileID: 616454375}
 --- !u!1 &1980571907
 GameObject:
   m_ObjectHideFlags: 0
@@ -16541,7 +16583,7 @@ GameObject:
   - component: {fileID: 1995611401}
   - component: {fileID: 1995611400}
   m_Layer: 5
-  m_Name: Rubber Pipes Harvester Head
+  m_Name: Rubber Pipes Harvester HeadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16903,7 +16945,7 @@ GameObject:
   - component: {fileID: 2030574636}
   - component: {fileID: 2030574635}
   m_Layer: 5
-  m_Name: Feed Rollers
+  m_Name: Feed RollersUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17006,7 +17048,7 @@ GameObject:
   - component: {fileID: 2086937498}
   - component: {fileID: 2086937501}
   m_Layer: 5
-  m_Name: Guarded Undercarriage
+  m_Name: Guarded UndercarriageUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17020,8 +17062,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086937496}
   m_LocalRotation: {x: -0, y: -0.9987477, z: -0, w: -0.05003079}
-  m_LocalPosition: {x: 0, y: 0, z: 0.032}
-  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
+  m_LocalPosition: {x: 0, y: 0, z: -0.37880012}
+  m_LocalScale: {x: 0.0019999996, y: 0.002, z: 0.0019999996}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2019931541}
@@ -17031,7 +17073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -185.735, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.079, y: 0.261}
+  m_AnchoredPosition: {x: -0.022500172, y: 0.34669992}
   m_SizeDelta: {x: 173.4, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086937498
