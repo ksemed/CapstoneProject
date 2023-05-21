@@ -2,13 +2,20 @@
 
 FBX Model was not included into project due to size limit for GitHub. This can be downloaded through the Capstone Folder - https://drive.google.com/drive/folders/1PFS3VPSEXscDdQEMNmgmUcog07QUBNoX
 
+Note - There is a folder labelled "UnusedCScripts". These scripts were used as stepping stones to complete the C scripts outside of that folder. They were not
+used in the Project involving the Harvester and the Operating Chair, but they can be looked at as reference.
+
 Documentation regarding attributes of each UI made/planning to make - https://docs.google.com/document/d/1Lw-FXbxrZazIOTHdDP3rDbIxav2emYUJSHzTLsOUiVY/edit
 
 Documentation regarding supporting documents in order to make progress - https://docs.google.com/document/d/1Hu8Jp7w-55TDG2RVOGltc1t1s5lS0IRIosxlJexJX2U/edit
 
+Dependencies:
+- Visual Studio Code
+- Unity + UnityHub
+
 How to operate Project:
 
-1. Once downloading all files, make sure to download the FBX Model in the drive folder and add to Assets (otherwise Harvester won't upload).
+1. Once you've downloaded all files, make sure to download the FBX Model in the drive folder and add to Assets (otherwise Harvester won't upload).
 2. Open up Unity and run 'Capstone Project'
 3. Once project has succesfully loaded, get your Oculus headset and USB connector
 4. Connect USB to computer and Oculus Headset. Then put on headset and select 'Yes' to all asking of permissions regarding the use of files
