@@ -11,6 +11,7 @@ public class Explosion2 : MonoBehaviour
     
     public void OnTriggerStay(Collider c)
     {
+        // Used to determine if Explosion is activated by user
         GameObject confirm = GameObject.Find("Exploding Confirmation");
         
         // Find position of colliding object
@@ -19,24 +20,29 @@ public class Explosion2 : MonoBehaviour
         Vector3 cposition = collidingTransform.position;
 
         // Finding position of object being collided with
-        string objectname = gameObject.name;    
+        string objectname = gameObject.name; // Game Object that this script is attached to   
         GameObject theobject = GameObject.Find(objectname);
         Transform objectTransform = theobject.transform;
         Vector3 oposition = objectTransform.position; 
 
+        // First collision (we want to set up middle vector and direction once)
         if(i == 0) {
             // Find the middle vector of list of components
             GameObject middle = GameObject.Find("BottomSphereLocation");
             Transform middleTransform = middle.transform;
             Vector3 mposition = middleTransform.position; 
 
-            // Vector Representing Proper Direction
+            // Vector Representing Proper Direction and Magnitude
             Direction = oposition - mposition;
             Direction = Direction * 15;
             transform.position += Direction * Time.deltaTime;
         }
 
-        if(confirm && (cposition.magnitude <= oposition.magnitude) && i > 0 && c.name != "BottomSphere") {
+        // If...
+        // User selects Harvester
+        // The object is farther out than the colliding object (so it doesn't move to infinity) 
+        // It's not the first collision object has gone through
+        if(confirm && (cposition.magnitude <= oposition.magnitude) && i > 0) {
                 transform.position += Direction * Time.deltaTime;
         }
 
@@ -45,16 +51,18 @@ public class Explosion2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPos = this.transform.position;
+        startPos = this.transform.position; // Logs the original position
     }
 
     // Update is called once per frame
     void Update()
     {        
+        // Determines if the confirmation is turned back off
         GameObject confirm2 = GameObject.Find("Exploding Confirmation");
 
+        // If confirmation is turned off (user selects sphere to return it back to original position)
         if(confirm2 == null) {
-            this.transform.position = startPos;
+            this.transform.position = startPos; // Use preloaded position to send everything back
         }
 
     }
