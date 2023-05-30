@@ -23,6 +23,6 @@ public class SetTrigger : MonoBehaviour
             ObjectCollider[1].isTrigger = true;
         }
 */
-        ObjectCollider[1].isTrigger = true;       
+        ObjectCollider[0].isTrigger = false;       
     }
 }
